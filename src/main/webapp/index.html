@@ -6,25 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./flipclock/flipclock.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./flipclock/flipclock.min.js"></script>
   <title>DAW OpenShift</title>
+  <style>
+    .clock {
+      text-align: center;
+      display: inline-block;
+      width: auto;
+    }
+  </style>
 </head>
 
 <body>
 
   <section class='container text-center'>
-    <div class="row">
-      <div class="col-lg-9">
-        <img style="width: 200px; height: auto" src="./images/happy.png" />
-        <h2>Hi there! This is my new DAW app in OpenShift using WildFly.</h2>
-        <h4>You can find my repo and source code in Github: <a href="https://github.com/Davidcorral94/daw1617-openshift"> DAW1617-OpenShift</a></h4>
-      </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <img style="width: 200px; height: auto; padding: 10px" src="./images/happy.png" />
+      <h2>Hi there! This is my new DAW app in OpenShift using WildFly.</h2>
+      <h3>You can find my repo and source code in Github: <a href="https://github.com/Davidcorral94/daw1617-openshift"> DAW1617-OpenShift</a></h3>
+      <br>
+      <h4><b>Total time here:</b></h4>
+      <div class="clock"></div>
     </div>
+    <div class="col-lg-2"></div>
   </section>
-
+  <script>
+    var clock = $('.clock').FlipClock({
+    });
+  </script>
 </body>
 
 </html>
